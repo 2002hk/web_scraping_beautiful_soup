@@ -1,0 +1,33 @@
+site : w3schools.com
+/html/body/div[3]/a[1]  --Absolute Path
+
+-- Relative Path{
+
+//a[@class='ga-nav subtopnav_firstitem']
+//a[@class='ga-nav subtopnav_firstitem' or @xpath='1']
+//a[@class='ga-nav subtopnav_firstitem' and @xpath='2']
+
+##text()
+//a[text()='HTML']
+##contains
+//a[contains(text(),'HT') and @xpath='1']
+//a[contains(@class,'ga-nav') and @title='HTML Tutorial' ]
+##starts-with
+//a[starts-with(text(),'PYTH')]
+##normalize-space used to remove leading and trailing space
+
+//label[normalize-space(text())='Hello World']
+
+
+}
+
+site: https://www.hyrtutorials.com/p/add-padding-to-containers.html
+xpath Axes
+//label[text()='Email']/preceding-sibling::input[1]
+//label[text()='Email']/preceding-sibling::input[1]/parent::div
+//div[@class='container']/child::input[@xpath='1']
+//td[text()='Maria Anders']/preceding-sibling::td/child::input
+//div[@class='container']/descendant::button
+//div[@class='buttons']/ancestor::div
+//div[@class='buttons']/parent::div
+//div[@class='buttons']/ancestor-or-self::div
